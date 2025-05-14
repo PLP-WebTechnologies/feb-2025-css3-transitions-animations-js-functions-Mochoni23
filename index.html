@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Cream - Ice Cream Paradise</title>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Dreamy Cream</h1>
+        <p class="tagline">Where Every Scoop is a Dream Come True</p>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#flavors">Our Flavors</a>
+        <a href="#about">About Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#secret" id="secretNav">🍦</a>
+    </nav>
+    
+    <section id="home">
+        <h2>Welcome to Dreamy Cream!</h2>
+        <p>We craft the most delightful, dreamy ice cream experiences using only the finest ingredients. Each scoop is made with love and a dash of magic!</p>
+        
+        <div class="specials-banner">
+            <div class="icecream-icon" style="top: 10px; left: 20px;">🍨</div>
+            <div class="icecream-icon" style="bottom: 10px; right: 20px;">🍧</div>
+            <h3>Today's Special!</h3>
+            <p>Buy 2 scoops, get 1 free! Every Wednesday from 2-5pm</p>
+        </div>
+        
+        <button id="flavorButton" class="icecream-button">Discover Your Dream Flavor</button>
+        <button id="secretButton" class="icecream-button">🍦 Secret Menu 🍦</button>
+        
+    </section>
+    
+    <section id="flavors">
+        <h2>Our Dreamy Flavors</h2>
+        <p>Click on any flavor to see it featured!</p>
+        
+        <img id="featuredFlavor" class="featured-flavor" src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Featured Flavor">
+        
+        <div class="flavor-gallery">
+            <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Vanilla Dream" onclick="changeFlavor(this)">
+            <img src="https://images.unsplash.com/photo-1516559828984-fb3b99548b21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Chocolate Fantasy" onclick="changeFlavor(this)">
+            <img src="https://images.unsplash.com/photo-1517093157656-b9eccef91cb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Strawberry Fields" onclick="changeFlavor(this)">
+            <img src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Minty Wonderland" onclick="changeFlavor(this)">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Rocky Road Adventure" onclick="changeFlavor(this)">
+            
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="colorChanger" class="icecream-button">Change My Color!</button>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>Our Story</h2>
+        
+        <div class="tabs-container">
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-button active" onclick="openTab(event, 'history')">Our History</button>
+                    <button class="tab-button" onclick="openTab(event, 'process')">Our Process</button>
+                    <button class="tab-button" onclick="openTab(event, 'team')">Our Team</button>
+                </div>
+            
+            <div id="history" class="tab-content active">
+                <h3>A Dream That Started Small</h3>
+                <p>Dreamy Cream began in 2010 as a small ice cream cart in Central Park. Founder Molly Dreamer wanted to create ice cream that would transport people to their happiest memories with every bite.</p>
+                <p>Today, we have 5 locations across the city, but we still make our ice cream the same way - small batches with big love.</p>
+            </div>
+            
+            <div id="process" class="tab-content">
+                <h3>Crafted With Care</h3>
+                <p>We source only the finest ingredients - organic dairy from local farms, seasonal fruits at their peak ripeness, and premium chocolates and nuts.</p>
+                <p>Each flavor is developed over months of testing to create the perfect balance of taste and texture. Our slow-churned process creates an ultra-creamy texture that's simply dreamy.</p>
+            </div>
+            
+            <div id="team" class="tab-content">
+                <h3>Meet the Dream Team</h3>
+                <p>Our team of "dream weavers" includes master ice cream makers, flavor scientists, and happiness ambassadors who ensure every visit to Dreamy Cream is magical.</p>
+                <p>From our scoopers who remember regulars' favorite flavors to our delivery team that gets your ice cream to you at the perfect temperature - we all share a passion for creating sweet dreams.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="accordion">
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleAccordion(this)">
+                    Do you offer dairy-free options?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <p>Yes! We have a rotating selection of delicious dairy-free flavors made with coconut milk, almond milk, or oat milk bases. These are made in a separate facility to avoid cross-contamination.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleAccordion(this)">
+                    What are your COVID safety measures?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <p>All staff are vaccinated and wear masks. We've installed plexiglass barriers at ordering stations and provide hand sanitizer throughout our shops. Online ordering with curbside pickup is available at all locations.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleAccordion(this)">
+                    Can I order a custom ice cream cake?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <p>Absolutely! We require 72 hours notice for custom cakes. You can choose any combination of our flavors and toppings. Visit our contact page to start your order.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleAccordion(this)">
+                    Do you ship nationwide?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <p>We currently ship to all 50 states via overnight delivery with special dry ice packaging to ensure your ice cream arrives frozen and perfect.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name (required):</label>
+                <input type="text" id="name" required oninput="validateName(this)">
+                <div class="error-message" id="nameError">Please enter your name</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" oninput="validateEmail(this)">
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="flavor">Favorite Flavor:</label>
+                <select id="flavor">
+                    <option value="">Select a flavor...</option>
+                    <option value="vanilla">Vanilla Dream</option>
+                    <option value="chocolate">Chocolate Fantasy</option>
+                    <option value="strawberry">Strawberry Fields</option>
+                    <option value="mint">Minty Wonderland</option>
+                    <option value="rocky">Rocky Road Adventure</option>
+                    
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" rows="5"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter"> Sign up for our Sweet Dreams newsletter
+                </label>
+            </div>
+            
+            <button type="submit" class="icecream-button">Send Message</button>
+        </form>
+    </section>
+    
+    <div id="secretMessage">
+        <h2>🍨 Secret Menu! 🍧</h2>
+        <p>You've discovered our secret menu items! Ask for these by name at any Dreamy Cream location:</p>
+        <ul style="text-align: left;">
+            <li><strong>Unicorn Dream</strong>: Cotton candy ice cream with pop rocks and marshmallow swirl</li>
+            <li><strong>Midnight Magic</strong>: Dark chocolate with black sesame and edible glitter</li>
+            <li><strong>Cloud Nine</strong>: Vanilla bean with toasted coconut and caramelized white chocolate</li>
+        </ul>
+        <button onclick="hideSecret()" class="icecream-button">Keep It Secret!</button>
+    </div>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>Dreamy Cream &copy; 2023 - All Rights Reserved</p>
+        <p>Made with ❤️ and 🍨 in New York City</p>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
